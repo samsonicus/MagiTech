@@ -1,8 +1,8 @@
 [
 {
-  "modid": "Magitech",
+  "modid": "magitech",
   "name": "Magitech",
-  "description": "A mod that fuses magic and tech, Sorry For bad code, i'am still getting into java and forge",
+  "description": "A mod that fuses magic and tech, Sorry For bad code I am still getting into java and forge",
   "version": "1.10.2-0.0.1-alpha",
   "mcversion": "1.10.2",
   "url": "",

@@ -1,1 +1,5 @@
-Item.magitech:test_item.name=Test Item
+# Items
+item.magitech:test_item.name=Test Item
+
+#Blocks
+tile.magitech:test_block.name=Test Block

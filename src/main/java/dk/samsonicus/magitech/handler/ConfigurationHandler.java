@@ -26,7 +26,7 @@ public class ConfigurationHandler {
             loadConfiguration();
         }
     }
-    public static void loadConfiguration(){
+    private static void loadConfiguration(){
         testConfig = configuration.getBoolean("testConfig", Configuration.CATEGORY_GENERAL, true, "This is a test config");
         if (configuration.hasChanged()){
             configuration.save();

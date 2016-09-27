@@ -1,8 +1,10 @@
 package dk.samsonicus.magitech.proxy;
 
 import dk.samsonicus.magitech.handler.ConfigurationHandler;
+import dk.samsonicus.magitech.init.ModBlocks;
 import dk.samsonicus.magitech.init.ModItems;
 import dk.samsonicus.magitech.utility.LogHelper;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
@@ -14,13 +16,14 @@ public abstract class CommonProxy implements IProxy{
     @Override
     public void onPreInit(FMLPreInitializationEvent event) {
         ConfigurationHandler.init(event.getSuggestedConfigurationFile());
-        ModItems.registerItem();
+        ModItems.registerItems();
+        ModBlocks.registerBlocks();
         LogHelper.info("PreInit complete");
     }
 
     @Override
     public void onInit(FMLInitializationEvent event) {
-
+        MinecraftForge.EVENT_BUS.register(new ConfigurationHandler());
     }
 
     @Override
