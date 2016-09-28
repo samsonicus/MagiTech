@@ -2,6 +2,7 @@ package dk.samsonicus.magitech.init;
 
 import dk.samsonicus.magitech.item.ItemMagitech;
 import dk.samsonicus.magitech.item.ItemTestItem;
+import dk.samsonicus.magitech.reference.Reference;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraftforge.client.model.ModelLoader;
@@ -12,6 +13,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 /**
  * Created by 5k on 21-09-2016.
  */
+@GameRegistry.ObjectHolder(Reference.MOD_ID)
 public class ModItems {
     public static final ItemMagitech TEST_ITEM = new ItemTestItem();
 

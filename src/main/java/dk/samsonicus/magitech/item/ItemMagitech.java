@@ -1,5 +1,6 @@
 package dk.samsonicus.magitech.item;
 
+import dk.samsonicus.magitech.creativetab.CreativeTabMagitech;
 import dk.samsonicus.magitech.reference.Reference;
 import dk.samsonicus.magitech.utility.LogHelper;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
@@ -16,7 +17,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 public class ItemMagitech extends Item {
     public ItemMagitech(){
         super();
-        this.setCreativeTab(CreativeTabs.MISC);
+        this.setCreativeTab(CreativeTabMagitech.MAGITECH_TAB);
     }
     @Override
     public String getUnlocalizedName(){

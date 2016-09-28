@@ -5,7 +5,7 @@
       "all": "magitech:blocks/test_block"
     },
     "model": "cube_all",
-    "uvlock": false
+    "uvlock": true
   },
   "variants": {
     "normal": [{
