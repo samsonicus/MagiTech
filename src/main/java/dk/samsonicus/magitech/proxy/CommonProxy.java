@@ -1,5 +1,6 @@
 package dk.samsonicus.magitech.proxy;
 
+import dk.samsonicus.magitech.client.handler.KeyInputEventHandler;
 import dk.samsonicus.magitech.handler.ConfigurationHandler;
 import dk.samsonicus.magitech.init.ModBlocks;
 import dk.samsonicus.magitech.init.ModItems;
@@ -25,6 +26,7 @@ public abstract class CommonProxy implements IProxy{
     @Override
     public void onInit(FMLInitializationEvent event) {
         MinecraftForge.EVENT_BUS.register(new ConfigurationHandler());
+        MinecraftForge.EVENT_BUS.register(new KeyInputEventHandler());
         Recipes.registerRecipes();
 
     }

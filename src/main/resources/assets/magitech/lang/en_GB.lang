@@ -1,8 +1,13 @@
+# Keys
+keys.magitech.category=Magitech
+keys.magitech.charge=Charge
+keys.magitech.release=Release
+
 # Items
 item.magitech:test_item.name=Test Item
 
-#Blocks
+# Blocks
 tile.magitech:test_block.name=Test Block
 
-#creative tab
+# Creative Tabs
 itemGroup.magitech=Magitech
