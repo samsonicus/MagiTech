@@ -18,6 +18,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 public class ModBlocks {
     public static final BlockMagitech TEST_BLOCK = new BlockTestBlock();
 
+
     public static void registerBlocks(){
         createItemBlock(TEST_BLOCK,"test_block");
     }
