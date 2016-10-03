@@ -18,13 +18,12 @@ public class ClientProxy extends CommonProxy {
         super.onPreInit(event);
         ModItems.registerItemRenders();
         ModBlocks.registerBlockrenders();
-        registerKeyBindings();
+        //registerKeyBindings();
     }
 
     @Override
     public void onInit(FMLInitializationEvent event) {
         super.onInit(event);
-        //ModItems.registerItemRenders();
     }
 
     @Override

@@ -22,6 +22,6 @@ public class KeyInputEventHandler {
 
     @SubscribeEvent
     public void handleKeyInputEvent(InputEvent.KeyInputEvent event){
-        LogHelper.info(getPressedKeybinding());
+        //LogHelper.info(getPressedKeybinding());
     }
 }

@@ -6,10 +6,12 @@ import dk.samsonicus.magitech.init.ModBlocks;
 import dk.samsonicus.magitech.init.ModItems;
 import dk.samsonicus.magitech.init.Recipes;
 import dk.samsonicus.magitech.utility.LogHelper;
+import dk.samsonicus.magitech.world.gen.WorldGenereatorTestBlock;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 
 /**
  * Created by 5k on 13-09-2016.
@@ -20,6 +22,7 @@ public abstract class CommonProxy implements IProxy{
         ConfigurationHandler.init(event.getSuggestedConfigurationFile());
         ModItems.registerItems();
         ModBlocks.registerBlocks();
+        GameRegistry.registerWorldGenerator(new WorldGenereatorTestBlock(),0);
         LogHelper.info("PreInit complete");
     }
 
