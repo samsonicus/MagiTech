@@ -4,6 +4,7 @@ import dk.samsonicus.magitech.client.handler.KeyInputEventHandler;
 import dk.samsonicus.magitech.handler.ConfigurationHandler;
 import dk.samsonicus.magitech.init.ModBlocks;
 import dk.samsonicus.magitech.init.ModItems;
+import dk.samsonicus.magitech.init.ModSounds;
 import dk.samsonicus.magitech.init.Recipes;
 import dk.samsonicus.magitech.utility.LogHelper;
 import dk.samsonicus.magitech.world.gen.WorldGenereatorTestBlock;
@@ -23,6 +24,7 @@ public abstract class CommonProxy implements IProxy{
         ModItems.registerItems();
         ModBlocks.registerBlocks();
         GameRegistry.registerWorldGenerator(new WorldGenereatorTestBlock(),0);
+        ModSounds.registerSounds();
         LogHelper.info("PreInit complete");
     }
 

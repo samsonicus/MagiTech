@@ -1,0 +1,11 @@
+{
+  "hit_metal": {
+    "category": "block",
+    "sounds": [
+      {
+        "name": "magitech:hit_metal",
+        "stream": false
+      }
+    ]
+  }
+}
