@@ -6,6 +6,7 @@ import dk.samsonicus.magitech.init.ModBlocks;
 import dk.samsonicus.magitech.init.ModItems;
 import dk.samsonicus.magitech.init.ModSounds;
 import dk.samsonicus.magitech.init.Recipes;
+import dk.samsonicus.magitech.network.handler.NetworkHandler;
 import dk.samsonicus.magitech.utility.LogHelper;
 import dk.samsonicus.magitech.world.gen.WorldGenereatorTestBlock;
 import net.minecraftforge.common.MinecraftForge;
@@ -25,6 +26,7 @@ public abstract class CommonProxy implements IProxy{
         ModBlocks.registerBlocks();
         GameRegistry.registerWorldGenerator(new WorldGenereatorTestBlock(),0);
         ModSounds.registerSounds();
+        NetworkHandler.init();
         LogHelper.info("PreInit complete");
     }
 

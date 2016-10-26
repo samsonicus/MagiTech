@@ -1,10 +1,8 @@
 package dk.samsonicus.magitech;
 
-import dk.samsonicus.magitech.handler.ConfigurationHandler;
-import dk.samsonicus.magitech.init.ModItems;
+
 import dk.samsonicus.magitech.proxy.IProxy;
 import dk.samsonicus.magitech.reference.Reference;
-import dk.samsonicus.magitech.utility.LogHelper;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;

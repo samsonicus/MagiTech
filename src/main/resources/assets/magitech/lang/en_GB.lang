@@ -1,7 +1,7 @@
 # Keys
 keys.magitech.category=Magitech
-keys.magitech.charge=Charge
-keys.magitech.release=Release
+keys.magitech.explode=explode
+keys.magitech.explode_big=Big explosion
 
 # Items
 item.magitech:test_item.name=Test Item

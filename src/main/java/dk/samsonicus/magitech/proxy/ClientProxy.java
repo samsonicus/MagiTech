@@ -1,8 +1,8 @@
 package dk.samsonicus.magitech.proxy;
 
-import dk.samsonicus.magitech.client.settings.Keybindings;
 import dk.samsonicus.magitech.init.ModBlocks;
 import dk.samsonicus.magitech.init.ModItems;
+import dk.samsonicus.magitech.reference.Keybindings;
 import net.minecraftforge.fml.client.registry.ClientRegistry;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
@@ -18,7 +18,7 @@ public class ClientProxy extends CommonProxy {
         super.onPreInit(event);
         ModItems.registerItemRenders();
         ModBlocks.registerBlockrenders();
-        //registerKeyBindings();
+        registerKeyBindings();
     }
 
     @Override
@@ -32,7 +32,8 @@ public class ClientProxy extends CommonProxy {
     }
 
     private void registerKeyBindings() {
-        ClientRegistry.registerKeyBinding(Keybindings.charge);
-        ClientRegistry.registerKeyBinding(Keybindings.release);
+        for (Keybindings key : Keybindings.values()) {
+            ClientRegistry.registerKeyBinding(key.getKeybind());
+        }
     }
 }
