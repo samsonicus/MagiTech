@@ -27,7 +27,7 @@ public class BlockTestBlock extends BlockMagitech {
     @Override
     public void updateTick(World worldIn, BlockPos pos, IBlockState state, Random rand)
     {
-        LogHelper.info("Ticked test block");
+        //LogHelper.info("Ticked test block");
         worldIn.playSound(null,pos,ModSounds.HIT_METAL, SoundCategory.BLOCKS,1.0F,rand.nextFloat()*2+0.5F);
     }
     @Override

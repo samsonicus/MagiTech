@@ -8,6 +8,7 @@ item.magitech:test_item.name=Test Item
 
 # Blocks
 tile.magitech:test_block.name=Test Block
+tile.magitech:Camomine.name=Camomine
 
 # Creative Tabs
 itemGroup.magitech=Magitech
