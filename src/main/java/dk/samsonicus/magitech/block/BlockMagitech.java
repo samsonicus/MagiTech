@@ -14,11 +14,11 @@ import net.minecraft.creativetab.CreativeTabs;
 public class BlockMagitech extends Block {
     public BlockMagitech(Material material){
         super(material);
+        this.setCreativeTab(CreativeTabMagitech.MAGITECH_TAB);
     }
 
     public BlockMagitech(){
         this(Material.ROCK);
-        this.setCreativeTab(CreativeTabMagitech.MAGITECH_TAB);
     }
 
     @Override

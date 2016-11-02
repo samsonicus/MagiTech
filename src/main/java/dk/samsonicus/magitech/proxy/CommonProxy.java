@@ -1,6 +1,5 @@
 package dk.samsonicus.magitech.proxy;
 
-import dk.samsonicus.magitech.client.handler.KeyInputEventHandler;
 import dk.samsonicus.magitech.handler.ConfigurationHandler;
 import dk.samsonicus.magitech.init.*;
 import dk.samsonicus.magitech.network.handler.NetworkHandler;
