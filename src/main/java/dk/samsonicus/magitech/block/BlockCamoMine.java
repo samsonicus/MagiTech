@@ -27,12 +27,11 @@ public class BlockCamoMine extends BlockMagitechTileEntity {
     }
 
     @Override
-    public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand, @Nullable ItemStack heldItem, EnumFacing side, float hitX, float hitY, float hitZ) {
+    public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ) {
         if (!worldIn.isRemote) {
             TileEntityCamoMine te = ((TileEntityCamoMine) worldIn.getTileEntity(pos));
-            te.setCamouflage(heldItem);
+            te.setCamouflage(playerIn.getHeldItemMainhand());
         }
-
         return true;
     }
 

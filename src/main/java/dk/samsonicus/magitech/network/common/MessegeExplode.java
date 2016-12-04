@@ -23,7 +23,8 @@ public class MessegeExplode extends MessegeBase<MessegeExplode> {
 
     @Override
     public void handleServerSide(MessegeExplode message, EntityPlayer player) {
-        player.worldObj.createExplosion(player,player.posX,player.posY-10,player.posZ,message.explosionSize,true);
+        //player.worldObj.createExplosion(player,player.posX,player.posY-10,player.posZ,message.explosionSize,true);
+        player.world.createExplosion(player,player.posX,player.posY-10,player.posZ,message.explosionSize,true);
     }
 
     @Override

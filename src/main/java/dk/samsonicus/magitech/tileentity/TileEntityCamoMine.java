@@ -29,10 +29,10 @@ public class TileEntityCamoMine extends TileEntityMagitech implements ITickable 
     @Override
     public void update() {
         if (timer > 0) timer--;
-        if(timer <= 0 && !worldObj.isRemote){
-            List<Entity> entities = worldObj.getEntitiesWithinAABB(Entity.class,new AxisAlignedBB(getPos()).expandXyz(1));
+        if(timer <= 0 && !world.isRemote){
+            List<Entity> entities = world.getEntitiesWithinAABB(Entity.class,new AxisAlignedBB(getPos()).expandXyz(1));
             if (entities.size()>0) {
-                worldObj.createExplosion(null, pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5, 3f, true);
+                world.createExplosion(null, pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5, 3f, true);
             }
         }
     }
@@ -44,9 +44,9 @@ public class TileEntityCamoMine extends TileEntityMagitech implements ITickable 
     }
 
     public void refreshBlock(){
-        if(worldObj != null){
-            IBlockState state = worldObj.getBlockState(getPos());
-            worldObj.notifyBlockUpdate(getPos(),state,state,3);
+        if(world != null){
+            IBlockState state = world.getBlockState(getPos());
+            world.notifyBlockUpdate(getPos(),state,state,3);
         }
     }
 
@@ -75,11 +75,12 @@ public class TileEntityCamoMine extends TileEntityMagitech implements ITickable 
     public void readFromNBT(NBTTagCompound compound){
         super.readFromNBT(compound);
         timer = compound.getInteger("timer");
+        /*
         if (compound.hasKey("camoStack")){
             camoStack = ItemStack.loadItemStackFromNBT(compound.getCompoundTag("camoStack"));
         }   else {
             camoStack = null;
-        }
+        }*/
 
 
     }

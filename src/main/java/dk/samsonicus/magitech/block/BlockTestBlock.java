@@ -30,14 +30,11 @@ public class BlockTestBlock extends BlockMagitech {
         //LogHelper.info("Ticked test block");
         worldIn.playSound(null,pos,ModSounds.HIT_METAL, SoundCategory.BLOCKS,1.0F,rand.nextFloat()*2+0.5F);
     }
+
     @Override
-    public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand, @Nullable ItemStack heldItem, EnumFacing side, float hitX, float hitY, float hitZ)
-    {
-        //Kept for reference.
-        /*if(worldIn.isAirBlock(new BlockPos(pos.getX(),pos.getY() +1, pos.getZ()))) {
-            worldIn.setBlockState(new BlockPos(pos.getX(), pos.getY() + 1, pos.getZ()), ModBlocks.TEST_BLOCK.getDefaultState(), 2);
-        }*/
+    public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ) {
         worldIn.playSound(pos.getX(),pos.getY(),pos.getZ(), ModSounds.HIT_METAL, SoundCategory.BLOCKS,5.0F, playerIn.getRNG().nextFloat()+0.5F,false);
         return true;
     }
+
 }
